@@ -17,11 +17,11 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact', href: '#contact' },
-
+    { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'About', href: '/#about' },
+    { name: 'Process', href: '/#process' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
@@ -61,7 +61,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/#contact"
               className="relative ml-4 px-8 py-3 bg-gradient-to-r from-primary to-accent text-dark font-bold rounded-xl hover:shadow-2xl hover:shadow-primary/50 transform hover:scale-105 transition-all duration-300 overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="mt-4 px-8 py-3 bg-gradient-to-r from-primary to-accent text-dark font-bold rounded-xl text-center transition-all duration-300 shadow-lg shadow-primary/30"
               >

@@ -20,7 +20,6 @@ export default function Footer() {
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '#' },
     ],
   }
 
@@ -58,7 +57,7 @@ export default function Footer() {
             </p>
 
             {/* Newsletter */}
-            <div className="glass rounded-2xl p-4 max-w-sm">
+            {/* <div className="glass rounded-2xl p-4 max-w-sm">
               <p className="text-white text-sm font-medium mb-3">Subscribe to our newsletter</p>
               <div className="flex space-x-2">
                 <input
@@ -70,7 +69,7 @@ export default function Footer() {
                   <ArrowUpRight className="w-5 h-5" />
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Company Links */}
@@ -131,7 +130,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} CodePloy. All rights reserved. Made with ❤️ and ☕
+            © {new Date().getFullYear()} CodePloy. All rights reserved.
           </p>
 
           {/* Social Links */}
