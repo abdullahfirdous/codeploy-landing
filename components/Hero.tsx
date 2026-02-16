@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Sparkles, Zap, Globe, Cpu } from 'lucide-react'
+import { ArrowRight, Sparkles, Zap, Globe, Cpu, Rocket, Star, Users, Headphones } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export default function Hero() {
@@ -94,26 +94,37 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Modern Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-fade-in delay-600">
-            {[
-              { value: '250+', label: 'Projects Delivered', icon: '🚀' },
-              { value: '98%', label: 'Client Satisfaction', icon: '⭐' },
-              { value: '50+', label: 'Expert Team', icon: '👥' },
-              { value: '24/7', label: 'Support', icon: '💬' },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="glass rounded-3xl p-6 hover-lift hover:glass-primary transition-all duration-300 group cursor-pointer"
-              >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                <div className="text-4xl font-display font-bold text-gradient mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-white/50 text-sm font-medium">{stat.label}</div>
-              </div>
-            ))}
+          {/* Stats Cards - Same as Privacy Policy */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto animate-fade-in delay-600">
+  {[
+    { value: '250+', label: 'Projects Delivered', desc: 'Worldwide clients served', icon: Rocket, color: 'text-blue-400', bg: 'bg-blue-500/10' },
+    { value: '98%', label: 'Client Satisfaction', desc: 'Consistently top-rated', icon: Star, color: 'text-primary', bg: 'bg-primary/10' },
+    { value: '50+', label: 'Expert Team', desc: 'Skilled professionals', icon: Users, color: 'text-purple-400', bg: 'bg-purple-500/10' },
+    { value: '24/7', label: 'Support', desc: 'Always here for you', icon: Headphones, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+  ].map((stat, index) => {
+    const Icon = stat.icon
+    return (
+      <div
+        key={index}
+        className="group relative glass rounded-2xl p-6 hover:glass-primary hover-lift transition-all overflow-hidden cursor-pointer"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+        <div className="relative space-y-3">
+          <div className={`w-12 h-12 ${stat.bg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+            <Icon className={`w-6 h-6 ${stat.color}`} />
           </div>
+          <div>
+            <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+            <div className="text-sm font-semibold text-white/70 mb-1">{stat.label}</div>
+            <div className="text-xs text-white/40">{stat.desc}</div>
+          </div>
+        </div>
+      </div>
+    )
+  })}
+</div>
         </div>
       </div>
 
