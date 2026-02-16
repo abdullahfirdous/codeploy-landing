@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import SplashScreen from '@/components/SplashScreen'
 
 export const metadata: Metadata = {
   title: 'CodePloy - Transform Ideas Into Digital Reality | Premium Development Agency',
@@ -29,7 +30,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <SplashScreen />  {/* Add this line */}
+        {children}
+      </body>
     </html>
   )
 }
