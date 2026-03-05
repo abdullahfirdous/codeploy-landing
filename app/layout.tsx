@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import SplashScreen from '@/components/SplashScreen'
+import PageLoadAnimation from '@/components/PageLoadAnimation'
 
 export const metadata: Metadata = {
   title: 'CodePloy - Transform Ideas Into Digital Reality | Premium Development Agency',
   description: 'Award-winning digital agency specializing in web & mobile development, UI/UX design, AI solutions, and digital transformation. 250+ successful projects delivered worldwide.',
   keywords: 'web development, mobile app development, UI/UX design, digital marketing, AI solutions, automation, brand building, digital agency, software development',
   authors: [{ name: 'CodePloy' }],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'CodePloy - Deploy Innovation',
     description: 'Transform your ideas into stunning digital reality with cutting-edge technology',
@@ -27,11 +32,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className="antialiased">
-        <SplashScreen />  {/* Add this line */}
+        {/* <PageLoadAnimation /> */}
         {children}
       </body>
     </html>

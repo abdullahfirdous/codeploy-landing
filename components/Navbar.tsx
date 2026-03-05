@@ -34,18 +34,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-all duration-300 shadow-lg shadow-primary/30">
-                <Sparkles className="w-6 h-6 text-dark" />
-              </div>
-              <div className="absolute inset-0 blur-xl bg-primary/50 group-hover:bg-primary/70 transition-all duration-300"></div>
-            </div>
-            <span className="text-white font-display text-2xl font-bold tracking-tight">
-              Code<span className="text-gradient">Ploy</span>
-            </span>
-          </Link>
+  <img 
+    src="/logo.png" 
+    alt="CodePloy" 
+    className="h-10 w-auto"
+  />
+  <span className="text-white font-display text-2xl font-bold tracking-tight">
+    Code<span className="text-gradient">Ploy</span>
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
